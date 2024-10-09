@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <script defer src="js/app.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <section id="vraag-1" class="container">
+        <h1>Wat is dit?</h1>
+        <img class="image" src="/data/hond.jpg" alt="">
+        <section class="button-container">
+            <button onclick="">Hond</button>
+            <button onclick="antwoordFout()">Kat</button>
+            <button onclick="antwoordFout()">Eend</button>
+        </section>
+    </section>
+    <section id="fout" class="container">
+        <h1>Fout</h1>
+        <h2>Het antwoord is:</h2>
+        <p>Hond</p>
+        <button onclick="volgendeVraag()">Doorgaan</button>
+    </section>
+    <section id="vraag-2" class="container">
+        <h1>Wat is dit? goed gelukt</h1>
+        <img class="image" src="/data/hond.jpg" alt="">
+        <section class="button-container">
+            <button>Hond</button>
+            <button>Kat</button>
+            <button>Eend</button>
+        </section>
+    </section>
+</body>
+</html>
