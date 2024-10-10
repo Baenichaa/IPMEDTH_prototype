@@ -18,7 +18,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: red;
 }
 
 .image {
@@ -45,7 +44,6 @@ textarea {
     grid-template-rows: 1fr;
     grid-column-gap: 30px;
     grid-row-gap: 0px;
-    background-color: blue;
 }
 
 button {
