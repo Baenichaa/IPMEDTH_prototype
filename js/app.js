@@ -3,9 +3,11 @@ schermGoed = document.getElementById("goed");
 
 let index = 1; // Start met vraag 1
 let totaalVragen = 10; // Stel het aantal vragen in
+let correcteAntwoordenTeller = 0;
 
 schermfout.style.display = "none";
 schermGoed.style.display = "none";
+document.getElementById("einde").style.display = "none";
 // vraag2.style.display = "none";
 // vraag3.style.display = "none";
 
@@ -16,7 +18,7 @@ for (let i = 2; i <= totaalVragen; i++) {
     }
 }
 
-const correcteAntwoorden = ["hond", "fiets", "windmolen", "antwoord4", "antwoord5", "antwoord6", "antwoord7", "antwoord8", "antwoord9", "antwoord10"];
+const correcteAntwoorden = ["hond", "fiets", "windmolen", "hond", "hond", "hond", "hond", "hond", "hond", "hond"];
 
 function antwoordFout() {
     document.getElementById(`vraag-${index}`).style.display = "none";
@@ -26,6 +28,7 @@ function antwoordFout() {
 function antwoordGoed() {
     document.getElementById(`vraag-${index}`).style.display = "none";
     schermGoed.style.display = "block";
+    correcteAntwoordenTeller++;
 }
 
 function checkAntwoord() {
@@ -53,6 +56,8 @@ function volgendeVraag() {
         addEventListenerToInput();
     } else {
         console.log("Er zijn geen meer vragen");
+        document.getElementById("einde").style.display = "block";
+        document.getElementById("resultaat").innerText = `Je hebt ${correcteAntwoordenTeller} van de ${totaalVragen} vragen goed beantwoord.`;
     }
 }
 
