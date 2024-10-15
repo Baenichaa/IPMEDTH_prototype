@@ -18,11 +18,12 @@ for (let i = 2; i <= totaalVragen; i++) {
     }
 }
 
-const correcteAntwoorden = ["hond", "fiets", "windmolen", "hond", "hond", "hond", "hond", "hond", "hond", "hond"];
+const correcteAntwoorden = ["hond", "fiets", "windmolen", "vlag", "kaas", "boek", "huis", "boot", "koe", "trein"];
 
 function antwoordFout() {
     document.getElementById(`vraag-${index}`).style.display = "none";
     schermfout.style.display = "block";
+    document.getElementById("juisteAntwoord").innerHTML = correcteAntwoorden[index - 1];
 }
 
 function antwoordGoed() {
