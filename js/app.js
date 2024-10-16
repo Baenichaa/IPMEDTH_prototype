@@ -72,4 +72,58 @@ function addEventListenerToInput() {
     });
 }
 
+
+const translations = {
+    arabic: {
+        'A': 'ا', 'B': 'ب', 'C': 'ج', 'D': 'د', 'E': 'إ', 'F': 'ف', 'G': 'غ', 'H': 'ه', 
+        'I': 'ي', 'J': 'ج', 'K': 'ك', 'L': 'ل', 'M': 'م', 'N': 'ن', 'O': 'و', 'P': 'پ', 
+        'Q': 'ق', 'R': 'ر', 'S': 'س', 'T': 'ت', 'U': 'ؤ', 'V': 'ڤ', 'W': 'و', 'X': 'خ', 
+        'Y': 'ي', 'Z': 'ز'
+    },
+    ukrainian: {
+        'A': 'А', 'B': 'Б', 'C': 'Ц', 'D': 'Д', 'E': 'Е', 'F': 'Ф', 'G': 'Г', 'H': 'Х', 
+        'I': 'І', 'J': 'Й', 'K': 'К', 'L': 'Л', 'M': 'М', 'N': 'Н', 'O': 'О', 'P': 'П', 
+        'Q': 'К', 'R': 'Р', 'S': 'С', 'T': 'Т', 'U': 'У', 'V': 'В', 'W': 'Ш', 'X': 'Кс', 
+        'Y': 'Й', 'Z': 'З'
+    }
+};
+
+const flagImages = {
+    arabic: 'img/Arabic.svg',
+    ukrainian: 'img/Ukraine.svg.png',
+    dutch: 'img/Nederland.webp'
+};
+
+let currentLanguage = '';
+
+function setLanguage(language) {
+    currentLanguage = language; // Update de taal
+
+    const feedbackFlag = document.getElementById('geselecteerde_vlag');
+    feedbackFlag.src = flagImages[language];
+}
+
+
+
+
+function showLetter(letter) {
+    console.log("showLetter called with:", letter); // Debugging log
+
+    document.getElementById('dutchLetter').innerText = letter;
+
+
+    const currentInput = document.getElementById(`input${index}`);
+    if (currentInput) {
+        currentInput.value += letter;
+    }
+
+    const translation = translations[currentLanguage][letter];
+    
+    document.getElementById('translatedLetter').innerText = translation || 'Geen vertaling';
+
+
+}
+
+
+
 addEventListenerToInput();

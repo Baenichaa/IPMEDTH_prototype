@@ -8,12 +8,51 @@
 body {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+#language-selection {
+    position: absolute;
+    left: 60px;
+    top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+#language-selection img {
+    width: 100px; /* Maak de vlaggen kleiner */
+    cursor: pointer;
+    border: 2px solid green; /* Voeg een zwarte rand toe */
+    border-radius: 5px; /* Maak de hoeken van de rand afgerond */
+    padding: 5px; /* Voeg wat ruimte tussen de rand en de afbeelding toe */
+    margin-bottom: 10px;
+}
+
+#language-selection #taal {
+    width: 130px;
+    margin-left: -10px;
+    margin-bottom: 20px;
+    cursor: default;
+    border: none;
+}
+
+#feedback {
+    font-size: 18px;
+    position: absolute;
+    right: 100px;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
 .container {
-    height: 90%;
+    height: 80%;
     width: 90%;
     display: flex;
     align-items: center;
@@ -76,14 +115,15 @@ body {
     border: solid 3px;
     border-color: green;
     width: 50%;
-    height: 50%;
-    margin-bottom: 10%;
+    height: 60%;
+    margin-bottom: 3%;
     object-fit: cover;
     object-position: center;
 }
 
 h1 {
-    margin-bottom: 5%;
+    margin-top: 20px;
+    margin-bottom: 2%;
     font-size: 2em;
 }
 
@@ -101,15 +141,15 @@ textarea {
 }
 
 input {
-    padding: 30px 10%;
+    padding: 15px 10%;
     border-radius: 10px;
     border: 2px solid green;
     text-align: center;
     font-size: 20px;
-    width: 80%;
+    width: 50%;
 }
 
-button {
+.button {
     margin-top: 10%;
     padding: 20px 10%;
     border-radius: 10px;
@@ -121,7 +161,53 @@ button {
     font-size: 20px;
 }
 
-button:hover {
+.button:hover {
     background: rgb(216, 216, 216);
     color: black;
 }
+
+
+#keyboard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+#nl_vlag {
+    width: 70px; /* Stel de breedte in */
+    height: auto; /* Schaal de hoogte automatisch */
+    vertical-align: middle; 
+}
+
+#geselecteerde_vlag {
+    width: 70px; /* Stel de breedte in */
+    height: auto; /* Schaal de hoogte automatisch */
+    vertical-align: middle;
+}
+
+#enter {
+    display: flex; 
+    justify-content: flex-end;
+}
+
+.row {
+    display: flex;
+    gap: 5px;
+}
+
+.key{
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.spacer {
+    width: 20px;
+}
+
+.spacer.half {
+    width: 0px;
+}
+
