@@ -34,18 +34,18 @@ body {
 }
 
 #language-selection #taal {
-    width: 130px;
-    margin-left: -10px;
+    width: 200px;
+    margin-left: -50px;
     margin-bottom: 20px;
     cursor: default;
     border: none;
 }
 
 #feedback {
-    font-size: 18px;
+    font-size: 25px;
     position: absolute;
-    right: 100px;
-    top: 80px;
+    right: 200px;
+    top: 300px;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -175,13 +175,13 @@ input {
 }
 
 #nl_vlag {
-    width: 70px; /* Stel de breedte in */
+    width: 100px; /* Stel de breedte in */
     height: auto; /* Schaal de hoogte automatisch */
     vertical-align: middle; 
 }
 
 #geselecteerde_vlag {
-    width: 70px; /* Stel de breedte in */
+    width: 100px; /* Stel de breedte in */
     height: auto; /* Schaal de hoogte automatisch */
     vertical-align: middle;
 }

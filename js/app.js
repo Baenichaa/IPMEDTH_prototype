@@ -42,6 +42,10 @@ function checkAntwoord() {
     } else {
         antwoordFout();
     }
+
+    document.getElementById('keyboard').style.display = "none";
+    document.getElementById('feedback').style.display = "none";
+    document.getElementById('language-selection').style.display = "none";
 }
 
 function volgendeVraag() {
@@ -55,6 +59,10 @@ function volgendeVraag() {
     if (index <= totaalVragen) {
         document.getElementById(`vraag-${index}`).style.display = "block";
         addEventListenerToInput();
+
+        document.getElementById('keyboard').style.display = "flex";
+        document.getElementById('feedback').style.display = "flex";
+        document.getElementById('language-selection').style.display = "flex";
     } else {
         console.log("Er zijn geen meer vragen");
         document.getElementById("einde").style.display = "block";
